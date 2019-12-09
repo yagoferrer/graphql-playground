@@ -8,7 +8,7 @@ Extensions:
 ### NPM Packages
 ```
 npm install graphql-yoga nodemon uuid 
-npm install babel-preset-env babel-plugin-transform-object-rest-spread babel-cli
+npm install babel-cli babel-preset-env babel-plugin-transform-object-rest-spread 
 ```
 
 ### package.json 
