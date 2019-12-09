@@ -14,3 +14,15 @@ npm install babel-preset-env babel-plugin-transform-object-rest-spread babel-cli
 ### package.json 
 
 "start": "nodemon src/index.js --exec babel-node"
+
+###.babelrc
+```
+{
+    "presets": [
+        "env"
+    ],
+    "plugins": [
+        "transform-object-rest-spread"
+    ]
+}
+```
