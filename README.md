@@ -4,6 +4,7 @@ Extensions:
 - GraphQL for VSCode
 - npm
 - npm Intellisense
+- Prettier 
 
 ### NPM Packages
 ```
