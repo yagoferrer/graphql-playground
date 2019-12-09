@@ -4,3 +4,8 @@ Extensions:
 - GraphQL for VSCode
 - npm
 - npm Intellisense
+
+Packages installed:
+```
+npm install uuid nodemon graphql-yoga babel-preset-env babel-plugin-transform-object-rest-spread babel-cli
+```
