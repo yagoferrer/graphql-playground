@@ -5,7 +5,7 @@ Extensions:
 - npm
 - npm Intellisense
 
-### Packages installed:
+### Packages installed
 ```
 npm install uuid nodemon graphql-yoga
 npm install babel-preset-env babel-plugin-transform-object-rest-spread babel-cli
