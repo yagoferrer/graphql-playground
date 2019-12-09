@@ -1,9 +1,10 @@
 {
   "name": "graphql-playground",
   "version": "1.0.0",
-  "description": "VSCode Studio Extensions:  - Babel ES6/ES7 - GraphQL for VSCode - npm - npm Intellisense",
+  "description": "GraphQL Playground Project",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon src/index.js --exec babel-node",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -11,7 +12,7 @@
     "url": "git+https://github.com/yagoferrer/graphql-playground.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Yago Ferrer",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/yagoferrer/graphql-playground/issues"
