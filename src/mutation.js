@@ -21,7 +21,17 @@ const mutation = {
         }
        Object.assign(user, args.data)
        return user
-    }
+    },
+    deleteUser(parent, args, { db }, info) {
+        const userIndex = db.users.findIndex((user) => user.id === args.id)
+
+        if (userIndex === -1) {
+            throw new Error('User not found')
+        }
+        
+        const deletedUser = db.users.splice(userIndex, 1)
+        return deletedUser[0]
+    } 
 }
 
 export default mutation
