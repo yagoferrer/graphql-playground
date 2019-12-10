@@ -4,6 +4,7 @@ import query from './query'
 import mutation from './mutation'
 import subscrition from './subscription'
 import user from './user'
+import post from './post'
 
 const pubsub = new PubSub()
 
@@ -13,7 +14,8 @@ const server = new GraphQLServer({
         Query: query,
         Mutation: mutation,
         Subscription: subscrition,
-        User: user
+        User: user,
+        Post: post
     },
     context: {
         db,

@@ -1,6 +1,7 @@
 type Query {
   me: User!
   allUsers: [User!]!
+  allPosts: [Post!]!
 }
 
 type Mutation {
@@ -38,4 +39,5 @@ type Post {
   title: String!
   body: String!
   published: Boolean!
+  author: User
 }

@@ -5,6 +5,9 @@ const query = {
     allUsers(parent, args, {db}, info) {
         return db.users
     },
+    allPosts(parent, args, {db}, info) {
+        return db.posts
+    }
 }
 
 export default query
