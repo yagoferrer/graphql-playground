@@ -1,15 +1,15 @@
 import uuidv4 from 'uuid'
 const mutation = {
-    createUser(parent, args, {db}, info) {
-        const emailExist = db.users.some((user) => user.email === args.data.email)
+    createUser(parent, {data}, {db}, info) {
+        const emailExist = db.users.some((user) => user.email === data.email)
 
         if (emailExist) {
-            throw new Error(`Email ${args.data.email} exists`)
+            throw new Error(`Email ${data.email} exists`)
         }
 
         const user = {
             id: uuidv4(),
-            ...args.data
+            ...data
         }
         db.users.push(user)
         return user
