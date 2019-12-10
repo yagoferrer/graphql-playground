@@ -1,17 +1,15 @@
 import { GraphQLServer } from 'graphql-yoga'
 import db from './db'
-
-const resolvers = {
-    Query: {
-        me(parent, args, ctx, info) {
-           return db.users.find((user) => user.id ==='1')
-        }
-    }
-}
+import query from './query'
 
 const server = new GraphQLServer({ 
     typeDefs: './src/schema.graphql', 
-    resolvers
+    resolvers: {
+        Query: query
+    },
+    context: {
+        db
+    }
 })
 
 server.start(() => {
