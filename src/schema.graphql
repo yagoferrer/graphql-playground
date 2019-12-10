@@ -1,16 +1,7 @@
 type Query {
   me: User!
   allUsers: [User!]!
-}
-
-type Mutation {
-  createUser(data: UserInput!): User!
-}
-
-input UserInput {
-  name: String!
-  email: String!
-  age: Int
+  getUserByName(name: String): User!
 }
 
 type User {
