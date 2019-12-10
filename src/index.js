@@ -1,13 +1,10 @@
 import { GraphQLServer } from 'graphql-yoga'
-
+import db from './db'
 
 const resolvers = {
     Query: {
         me(parent, args, ctx, info) {
-            return {
-                id: '1',
-                name: 'Yago'
-            }
+           return db.users.find((user) => user.id ==='1')
         }
     }
 }
@@ -18,5 +15,5 @@ const server = new GraphQLServer({
 })
 
 server.start(() => {
-    console.log('The server is up! got to http://localhost:4000')
+    console.log('The server is up!  http://localhost:4000')
 })
